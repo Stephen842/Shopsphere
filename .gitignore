@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS/System files
+.DS_Store
+
+# Database
+db.sqlite3
+
+# Secrets
+.env
+*.key
+
+# Database
+db.sqlite3
+
+# Local Django files
+static/
+media/
