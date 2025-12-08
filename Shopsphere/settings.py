@@ -45,9 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
+    'account',
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +63,19 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Shopsphere.urls'
+
+AUTH_USER_MODEL = 'account.User'
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    #This is for the custom Auth backend for the entire project
+    'account.BackendAuth.CustomAuthBackend',
+
+    # Django defaults
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 TEMPLATES = [
     {
