@@ -8,7 +8,7 @@ class SimpleIPThrottle(BaseThrottle):
     """
     Allows a maximum of `max_requests` per `duration` seconds per IP.
     """
-    max_requests = 5
+    max_requests = 10
     duration = 180  # seconds (3 minutes)
 
     def allow_request(self, request, view):
