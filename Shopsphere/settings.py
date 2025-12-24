@@ -64,12 +64,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shop',
-    'account',
+
+    # Django contrib
+    'django.contrib.sites',
+
+    # Third-party
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
-    'django.contrib.sites',
+
+    # My apps
+    'shop',
+    'account',
 ]
 
 MIDDLEWARE = [

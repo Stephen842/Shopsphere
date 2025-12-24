@@ -10,7 +10,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.exceptions import ValidationError
 
 from .models import Category, Product, Cart, CartItem, Order
-from .serializers import CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer, OrderSerializer
+from .serializers import CategorySerializer, ProductSerializer, CartSerializer, OrderSerializer
 from .filters import ProductFilter
 
 

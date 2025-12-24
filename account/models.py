@@ -1,9 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django_countries.fields import CountryField
-from django.conf import settings
-from django.urls import reverse
-from django.contrib.sites.models import Site
 from django.utils import timezone
 
 
