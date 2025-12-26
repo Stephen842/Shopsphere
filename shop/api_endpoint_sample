@@ -1,0 +1,42 @@
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+Endpoint that doesn't require authentication(Primarily GET request) - In regard to the e-commerce
+http://127.0.0.1:8000/api/shop/products/
+http://127.0.0.1:8000/api/shop/categories/
+
+User Authentication endpoint - Action based
+http://127.0.0.1:8000/api/account/login/
+{
+  "identifier": "username or email",
+  "password": "Password"
+}
+http://127.0.0.1:8000/api/account/register/
+{
+    "name": "Ugota Chisom Stephen",
+    "username": "Stephen222",
+    "email": "youremail111@gmail.com",
+    "country": "NG",
+    "password": "#Password"
+}
+
+http://127.0.0.1:8000/api/account/profile/
+http://127.0.0.1:8000/api/account/change-password/
+
+Shop endpoint
+http://127.0.0.1:8000/api/shop/cart/
+
+http://127.0.0.1:8000/api/shop/cart/add/
+{
+  "product_id": 1,
+  "quantity": 2
+}
+
+http://127.0.0.1:8000/api/shop/cart/remove/
+{
+  "product_id": 1
+}
+http://127.0.0.1:8000/api/shop/cart/clear/
+
+http://127.0.0.1:8000/api/shop/orders/checkout/
+http://127.0.0.1:8000/api/shop/orders/

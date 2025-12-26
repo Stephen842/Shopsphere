@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
+    'csp',
 
     # My apps
     'shop',
@@ -89,24 +90,25 @@ MIDDLEWARE = [
     'csp.middleware.CSPMiddleware',
 ]
 
-CSP_DEFAULT_SRC = ("'self'",)
-
-CSP_STYLE_SRC = (
-    "'self'",
-    "https://fonts.googleapis.com",
-    "https://cdn.jsdelivr.net",
-    "https://unpkg.com",
-)
-
-CSP_FONT_SRC = (
-    "'self'",
-    "https://fonts.gstatic.com",
-)
-
-CSP_SCRIPT_SRC = (
-    "'self'",
-    "https://cdn.jsdelivr.net",
-)
+CONTENT_SECURITY_POLICY = {
+    'DIRECTIVES': {
+        'default-src': ("'self'",),
+        'style-src': (
+            "'self'",
+            "https://fonts.googleapis.com",
+            "https://cdn.jsdelivr.net",
+            "https://unpkg.com",
+        ),
+        'font-src': (
+            "'self'",
+            "https://fonts.gstatic.com",
+        ),
+        'script-src': (
+            "'self'",
+            "https://cdn.jsdelivr.net",
+        ),
+    }
+}
 
 ROOT_URLCONF = 'Shopsphere.urls'
 
